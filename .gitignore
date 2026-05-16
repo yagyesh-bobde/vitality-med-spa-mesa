@@ -1,0 +1,6 @@
+.vercel
+.DS_Store
+_video_tmp/
+_ssl_screenshot.js
+_ssl_warning.html
+before-ssl-warning.png

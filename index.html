@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vitality Med Spa — Doctor-Supervised Weight Loss & Hormone Therapy in Mesa, AZ</title>
+<meta name="description" content="100% MD-supervised weight loss, hormone replacement, and aesthetics in Mesa, Arizona. Operating since 2006. Semaglutide, HCG, HRT, IV hydration, Botox.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#efe6d6;       /* warm sand */
+    --sand-2:#e3d6bf;
+    --bone:#f8f3e8;
+    --clay:#b4593a;       /* desert clay */
+    --clay-2:#8e4126;
+    --pine:#2f3d31;       /* deep desert pine */
+    --pine-2:#1d2920;
+    --ink:#1a1614;
+    --muted:#6b6256;
+    --line:#d8c9b1;
+    --ok:#2f6f4f;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bone);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.08;margin:0}
+  .container{max-width:1240px;margin:0 auto;padding:0 32px}
+  .eyebrow{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay)}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--pine);color:var(--bone);padding:14px 26px;border-radius:999px;font-weight:500;font-size:15px;border:none;cursor:pointer;transition:all .2s}
+  .btn:hover{background:var(--pine-2);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--pine);border:1px solid var(--pine)}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:hover{background:var(--clay-2)}
+
+  /* ─── NAV ─── */
+  nav{position:sticky;top:0;z-index:50;background:rgba(248,243,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Instrument Serif',serif;font-size:24px;letter-spacing:-.01em}
+  .logo .leaf{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--pine),var(--clay));display:inline-block}
+  .nav-links{display:flex;gap:32px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:16px;font-size:14px}
+  .phone-strong{color:var(--pine);font-weight:600}
+  .secure-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(47,111,79,.1);color:var(--ok);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;letter-spacing:.05em}
+
+  /* ─── HERO ─── */
+  .hero{position:relative;padding:64px 0 80px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero h1{font-size:88px}
+  .hero h1 em{color:var(--clay);font-style:italic}
+  .hero-lead{font-size:19px;color:var(--muted);margin:28px 0 36px;max-width:520px;line-height:1.6}
+  .hero-ctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:36px}
+  .hero-meta{display:flex;gap:28px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+  .hero-meta .pip{color:var(--clay);font-weight:700;margin-right:6px}
+  .hero-img{position:relative;border-radius:24px;overflow:hidden;background:var(--sand);aspect-ratio:4/5}
+  .hero-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03)}
+  /* trust card overlay */
+  .trust-card{position:absolute;left:-24px;bottom:32px;background:#fff;border-radius:14px;padding:18px 22px;box-shadow:0 18px 60px rgba(45,32,12,.18);display:flex;gap:14px;align-items:center;max-width:300px}
+  .trust-card .lock{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#e7f4ed,#cfe7d8);display:grid;place-items:center;font-size:22px;color:var(--ok)}
+  .trust-card b{display:block;font-size:14px;font-family:'DM Sans';color:var(--ink)}
+  .trust-card span{font-size:12px;color:var(--muted)}
+  .rating-card{position:absolute;right:-20px;top:32px;background:var(--pine);color:var(--bone);border-radius:14px;padding:16px 20px;font-size:13px;box-shadow:0 18px 60px rgba(45,32,12,.22)}
+  .rating-card .num{font-family:'Instrument Serif',serif;font-size:42px;line-height:1;color:#f3c98a;display:block}
+  .rating-card .stars{color:#f3c98a;letter-spacing:2px;font-size:14px}
+
+  /* ─── DIFFERENTIATOR (section 2) ─── */
+  .differentiator{background:var(--pine);color:var(--bone);padding:90px 0;position:relative}
+  .diff-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+  .differentiator h2{font-size:64px;color:var(--bone)}
+  .differentiator h2 em{color:#f3c98a;font-style:italic}
+  .diff-lead{font-size:17px;color:rgba(248,243,232,.78);margin:24px 0 36px;line-height:1.65}
+  .diff-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;border-top:1px solid rgba(248,243,232,.18);padding-top:32px}
+  .diff-stats .stat .n{font-family:'Instrument Serif',serif;font-size:48px;color:#f3c98a;line-height:1;display:block;margin-bottom:6px}
+  .diff-stats .stat p{font-size:13px;color:rgba(248,243,232,.7);margin:0}
+  .md-card{background:rgba(248,243,232,.05);border:1px solid rgba(248,243,232,.14);border-radius:18px;padding:36px}
+  .md-card-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+  .md-icon{width:46px;height:46px;border-radius:12px;background:#f3c98a;color:var(--pine-2);display:grid;place-items:center;font-weight:700;font-family:'Instrument Serif',serif;font-size:22px}
+  .md-card h3{font-size:28px;color:var(--bone)}
+  .md-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+  .md-card li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(248,243,232,.86)}
+  .md-card li::before{content:"✓";color:#f3c98a;font-weight:700;font-size:18px;line-height:1.3}
+  .program-tag{display:inline-block;background:rgba(243,201,138,.16);color:#f3c98a;font-size:12px;font-weight:600;padding:6px 12px;border-radius:6px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+
+  /* ─── SERVICES ─── */
+  .services{padding:100px 0;background:var(--bone)}
+  .services-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;gap:40px;flex-wrap:wrap}
+  .services-head h2{font-size:54px;max-width:680px}
+  .services-head p{color:var(--muted);max-width:340px;font-size:15px}
+  .svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .svc{position:relative;border-radius:18px;overflow:hidden;background:var(--sand);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff;transition:transform .25s}
+  .svc:hover{transform:translateY(-4px)}
+  .svc .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,22,20,.0) 38%,rgba(26,22,20,.78) 100%)}
+  .svc .body{position:relative;z-index:2}
+  .svc h3{font-size:22px;color:#fff;margin-bottom:6px}
+  .svc .price{font-size:13px;color:rgba(255,255,255,.85);font-family:'DM Sans';font-weight:500}
+  .svc .badge{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.94);color:var(--pine);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;letter-spacing:.06em;text-transform:uppercase}
+  .svc.wide{grid-column:span 3}
+  .svc.med{grid-column:span 3}
+  .svc.sm{grid-column:span 2}
+  .svc-type{background:var(--clay);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 28px}
+  .svc-type::after{display:none}
+  .svc-type h3{font-size:26px;line-height:1.15}
+  .svc-type p{font-size:13px;color:rgba(255,255,255,.85);margin-top:10px}
+  .svc-foot{margin-top:24px;font-size:12px;color:var(--muted)}
+
+  /* ─── RESULTS ─── */
+  .results{padding:100px 0;background:var(--sand)}
+  .results-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .results h2{font-size:54px}
+  .results h2 em{color:var(--clay);font-style:italic}
+  .results-lead{color:var(--muted);font-size:16px;margin:20px 0 30px;max-width:480px}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid var(--line);padding-top:28px;margin-top:36px}
+  .stat-row .stat .n{font-family:'Instrument Serif',serif;font-size:46px;color:var(--pine);line-height:1;display:block}
+  .stat-row .stat p{font-size:13px;color:var(--muted);margin:8px 0 0}
+  .ba-frame{background:#fff;border-radius:20px;padding:18px;box-shadow:0 18px 60px rgba(45,32,12,.1)}
+  .ba-img{aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--sand-2);position:relative;display:grid;place-items:center;text-align:center;padding:30px}
+  .ba-img .label{position:absolute;top:14px;left:14px;background:var(--pine);color:#fff;font-size:11px;padding:4px 10px;border-radius:5px;letter-spacing:.06em;font-weight:600}
+  .ba-img .label.after{left:auto;right:14px;background:var(--clay)}
+  .ba-text{font-family:'Instrument Serif',serif;font-size:34px;color:var(--pine);line-height:1.05}
+  .ba-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .results-foot{margin-top:18px;font-size:11px;color:var(--muted);text-align:center}
+
+  /* ─── FOUNDER / TEAM ─── */
+  .team{padding:100px 0;background:var(--bone)}
+  .team-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
+  .team-photo{aspect-ratio:4/5;border-radius:22px;background:var(--sand-2);overflow:hidden;position:relative}
+  .team-photo .placeholder{position:absolute;inset:0;background:linear-gradient(160deg,#d4c2a2,#b09879);display:grid;place-items:center;font-family:'Instrument Serif',serif;font-size:120px;color:rgba(248,243,232,.6)}
+  .team h2{font-size:54px}
+  .team h2 em{color:var(--clay);font-style:italic}
+  .team-lead{color:var(--muted);font-size:16px;margin:24px 0;line-height:1.7}
+  .team-people{display:flex;flex-direction:column;gap:18px;margin-top:30px;border-top:1px solid var(--line);padding-top:30px}
+  .team-people .p-row{display:flex;align-items:center;gap:18px}
+  .team-people .avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--pine),var(--clay));color:var(--bone);display:grid;place-items:center;font-family:'Instrument Serif',serif;font-size:20px;font-weight:400}
+  .team-people b{display:block;font-size:15px;font-family:'DM Sans';color:var(--ink)}
+  .team-people span{font-size:13px;color:var(--muted)}
+
+  /* ─── REVIEWS ─── */
+  .reviews{padding:100px 0;background:var(--pine);color:var(--bone)}
+  .reviews-head{text-align:center;margin-bottom:60px}
+  .reviews-head h2{font-size:54px;color:var(--bone)}
+  .reviews-head h2 em{color:#f3c98a;font-style:italic}
+  .reviews-head .meta{margin-top:14px;color:rgba(248,243,232,.7);font-size:14px}
+  .reviews-head .stars{color:#f3c98a;letter-spacing:3px}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .review{background:rgba(248,243,232,.05);border:1px solid rgba(248,243,232,.14);border-radius:18px;padding:30px}
+  .review .tag{display:inline-block;background:#f3c98a;color:var(--pine-2);font-size:11px;font-weight:600;padding:5px 10px;border-radius:5px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px}
+  .review p{font-size:15px;color:rgba(248,243,232,.88);line-height:1.6;margin:0 0 24px;font-style:italic}
+  .review .name{font-size:13px;color:rgba(248,243,232,.7)}
+  .review .name b{color:var(--bone);font-family:'DM Sans';font-weight:600}
+
+  /* ─── CONTACT / BOOKING ─── */
+  .contact{padding:100px 0;background:var(--bone)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
+  .contact h2{font-size:54px;margin-bottom:24px}
+  .contact h2 em{color:var(--clay);font-style:italic}
+  .contact-info{color:var(--muted);font-size:16px;line-height:1.7}
+  .info-block{margin-top:30px;padding-top:30px;border-top:1px solid var(--line)}
+  .info-block .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:8px}
+  .info-block .val{font-size:17px;color:var(--ink);font-family:'DM Sans';font-weight:500}
+  .info-block .val a{color:var(--pine);border-bottom:1px solid var(--pine);padding-bottom:1px}
+
+  .booking{background:#fff;border-radius:20px;padding:38px;box-shadow:0 18px 60px rgba(45,32,12,.08);border:1px solid var(--line)}
+  .booking h3{font-family:'Instrument Serif',serif;font-size:32px;margin-bottom:8px}
+  .booking .sub{color:var(--muted);font-size:14px;margin-bottom:26px}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+  .field label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .field input,.field select{padding:13px 16px;border:1px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;background:#fff;color:var(--ink);transition:border-color .2s}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--clay)}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .submit{width:100%;background:var(--pine);color:var(--bone);border:none;padding:16px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;letter-spacing:.04em;margin-top:8px;transition:background .2s}
+  .submit:hover{background:var(--pine-2)}
+  .form-foot{font-size:11px;color:var(--muted);margin-top:14px;text-align:center}
+  .success{display:none;background:rgba(47,111,79,.08);border:1px solid rgba(47,111,79,.3);color:var(--ok);padding:22px;border-radius:12px;text-align:center}
+  .success.show{display:block}
+  .success b{display:block;font-family:'Instrument Serif',serif;font-size:24px;color:var(--pine);margin-bottom:8px}
+
+  /* ─── FOOTER ─── */
+  footer{background:var(--ink);color:rgba(248,243,232,.7);padding:50px 0 30px;font-size:13px}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .foot-row a{color:var(--bone)}
+  .foot-secure{display:inline-flex;align-items:center;gap:8px;color:#7fc09a;font-weight:500}
+  .foot-meta{text-align:right}
+
+  @media (max-width:980px){
+    .hero-grid,.diff-grid,.results-grid,.team-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .hero h1{font-size:54px}
+    .differentiator h2,.services-head h2,.results h2,.team h2,.reviews-head h2,.contact h2{font-size:38px}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .svc.wide,.svc.med,.svc.sm{grid-column:span 2}
+    .review-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-row">
+    <a class="logo" href="#"><span class="leaf"></span>Vitality Med Spa</a>
+    <div class="nav-links">
+      <a href="#weightloss">Weight Loss</a>
+      <a href="#services">Services</a>
+      <a href="#team">Our Doctors</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <span class="secure-badge">🔒 Secure Site</span>
+      <span class="phone-strong">(480) 854-8000</span>
+      <a href="#contact" class="btn">Book a consult</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Mesa · Established 2006</span>
+      <h1>Doctor-supervised wellness <em>in the heart of the East Valley.</em></h1>
+      <p class="hero-lead">Weight loss, hormone replacement, aesthetics — all under the care of an MD medical director and a licensed nursing team. Twenty years serving Mesa.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn">Book a consult</a>
+        <a href="#weightloss" class="btn btn-ghost">See weight-loss programs →</a>
+      </div>
+      <div class="hero-meta">
+        <span><b class="pip">★</b> 4.8 average · 202 Google reviews</span>
+        <span><b class="pip">●</b> 3 valley locations</span>
+        <span><b class="pip">●</b> Same-week appointments</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="assets/hero.png" alt="Vitality Med Spa in Mesa, Arizona — doctor-supervised wellness">
+      <div class="trust-card">
+        <div class="lock">🔒</div>
+        <div>
+          <b>100% MD Supervised</b>
+          <span>Medical director Dr. Kristie Blessitt, MD</span>
+        </div>
+      </div>
+      <div class="rating-card">
+        <span class="num">4.8</span>
+        <div class="stars">★★★★★</div>
+        <div>202 Google reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATOR — weight loss + HRT (section 2) -->
+<section class="differentiator" id="weightloss">
+  <div class="container diff-grid">
+    <div>
+      <span class="eyebrow" style="color:#f3c98a">What we're known for</span>
+      <h2>Low-cost weight loss <em>and hormone therapy,</em> 100% MD-supervised.</h2>
+      <p class="diff-lead">Most med spas hand you injections and send you home. We don't. Every weight-loss patient at Vitality is dosed, monitored, and adjusted by a licensed medical doctor. Twenty years of refining the protocol. Three Valley locations. Honest pricing.</p>
+      <div class="diff-stats">
+        <div class="stat"><span class="n">20 yrs</span><p>Operating in the Valley since 2006</p></div>
+        <div class="stat"><span class="n">3</span><p>Locations: Mesa (flagship), Phoenix, Scottsdale</p></div>
+        <div class="stat"><span class="n">100%</span><p>Programs supervised by an MD</p></div>
+        <div class="stat"><span class="n">4.8★</span><p>From 202 verified Google reviews</p></div>
+      </div>
+    </div>
+    <div class="md-card">
+      <span class="program-tag">Weight Loss + HRT</span>
+      <div class="md-card-row">
+        <div class="md-icon">Rx</div>
+        <h3>The Vitality program</h3>
+      </div>
+      <ul>
+        <li><div><b style="color:var(--bone)">Semaglutide / GLP-1</b><div style="color:rgba(248,243,232,.65);font-size:13px;margin-top:2px">Weekly weight-loss injections, titrated by your MD.</div></div></li>
+        <li><div><b style="color:var(--bone)">HCG protocol</b><div style="color:rgba(248,243,232,.65);font-size:13px;margin-top:2px">For patients where GLP-1s aren't the right fit.</div></div></li>
+        <li><div><b style="color:var(--bone)">Bioidentical hormone replacement</b><div style="color:rgba(248,243,232,.65);font-size:13px;margin-top:2px">Lab-guided HRT for energy, sleep, libido, mood.</div></div></li>
+        <li><div><b style="color:var(--bone)">IV hydration & vitamin therapy</b><div style="color:rgba(248,243,232,.65);font-size:13px;margin-top:2px">Immunity, migraine, recovery, post-travel.</div></div></li>
+        <li><div><b style="color:var(--bone)">Quarterly labs & MD check-ins</b><div style="color:rgba(248,243,232,.65);font-size:13px;margin-top:2px">No "set it and forget it" prescriptions.</div></div></li>
+      </ul>
+      <a href="#contact" class="btn btn-clay" style="margin-top:28px">Book a consult</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head">
+      <h2>Everything else we do, under one roof.</h2>
+      <p>Aesthetic and wellness treatments for women and men in Mesa, Phoenix, and Scottsdale. Pricing as of mockup date — confirm at consult.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc wide" style="background:linear-gradient(135deg,#3a5a4a,#2f3d31)">
+        <span class="badge">Most booked</span>
+        <div class="body">
+          <h3>Semaglutide weight loss</h3>
+          <div class="price">From $299 / mo · 3-mo program from $799</div>
+        </div>
+      </div>
+      <div class="svc med" style="background:linear-gradient(135deg,#b4593a,#8e4126)">
+        <span class="badge">MD only</span>
+        <div class="body">
+          <h3>Hormone replacement</h3>
+          <div class="price">Lab panel + plan from $349 · ongoing from $99/mo</div>
+        </div>
+      </div>
+      <div class="svc sm" style="background:linear-gradient(160deg,#d4a574,#b08855)">
+        <div class="body">
+          <h3>Botox / Dysport</h3>
+          <div class="price">From $12 / unit</div>
+        </div>
+      </div>
+      <div class="svc sm" style="background:linear-gradient(160deg,#7a8b6a,#5a6b4e)">
+        <div class="body">
+          <h3>IV hydration</h3>
+          <div class="price">From $129 per drip</div>
+        </div>
+      </div>
+      <div class="svc-type sm">
+        <div>
+          <h3>Custom facial &amp; laser packages</h3>
+          <p>Ask about our member pricing.</p>
+        </div>
+      </div>
+      <div class="svc sm" style="background:linear-gradient(160deg,#9b6e54,#6f4a35)">
+        <div class="body">
+          <h3>HCG weight loss</h3>
+          <div class="price">From $399 / cycle</div>
+        </div>
+      </div>
+      <div class="svc med" style="background:linear-gradient(135deg,#5a6b4e,#3a4a35)">
+        <div class="body">
+          <h3>Dermal fillers</h3>
+          <div class="price">From $649 / syringe</div>
+        </div>
+      </div>
+      <div class="svc med" style="background:linear-gradient(135deg,#a47651,#7e5439)">
+        <div class="body">
+          <h3>Microneedling &amp; PRP</h3>
+          <div class="price">From $349 per session</div>
+        </div>
+      </div>
+    </div>
+    <p class="svc-foot">*Pricing as of mockup date. Final pricing confirmed during your free consult.</p>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results">
+  <div class="container results-grid">
+    <div>
+      <span class="eyebrow">Real outcomes</span>
+      <h2>Twenty years of patients <em>who actually stuck with it.</em></h2>
+      <p class="results-lead">Our weight-loss patients average measurable progress within 90 days. Hormone patients report improvement in the first month. Every protocol is dose-adjusted under MD supervision until it works for you.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="n">12-22 lbs</span><p>Avg. 90-day weight loss on Semaglutide protocol*</p></div>
+        <div class="stat"><span class="n">93%</span><p>Patients reporting energy gains in first 30 days*</p></div>
+        <div class="stat"><span class="n">202</span><p>Verified Google reviews, 4.8★ average</p></div>
+      </div>
+      <p class="results-foot" style="text-align:left;margin-top:18px">*Estimated from public reviews and clinical literature. Individual results vary. Discussed at your consult.</p>
+    </div>
+    <div class="ba-frame">
+      <div class="ba-row">
+        <div class="ba-img" style="background:linear-gradient(160deg,#d4c2a2,#b09879)">
+          <span class="label">Day 1</span>
+          <div class="ba-text">Lab panel<br>& baseline</div>
+        </div>
+        <div class="ba-img" style="background:linear-gradient(160deg,#5a6b4e,#3a4a35)">
+          <span class="label after">Day 90</span>
+          <div class="ba-text" style="color:#fff">Measurable<br>progress</div>
+        </div>
+      </div>
+      <p class="results-foot">Patient privacy: real before/afters shared by request during consult, with patient consent only.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="container team-grid">
+    <div class="team-photo">
+      <div class="placeholder">D</div>
+    </div>
+    <div>
+      <span class="eyebrow">The team behind your protocol</span>
+      <h2>An MD medical director, a registered nurse, and an owner who <em>still does your intake herself.</em></h2>
+      <p class="team-lead">Vitality opened in 2006 under Desiree Wooding, a licensed esthetician and certified laser technician. Today every clinical decision flows through our medical director, Dr. Kristie Blessitt, MD. You will meet her — not a chatbot, not a "wellness coach."</p>
+      <div class="team-people">
+        <div class="p-row">
+          <div class="avatar">DW</div>
+          <div><b>Desiree Wooding</b><span>Owner · Licensed Esthetician · Certified Laser Technician</span></div>
+        </div>
+        <div class="p-row">
+          <div class="avatar">KB</div>
+          <div><b>Dr. Kristie Blessitt, MD</b><span>Medical Director — supervises every weight-loss & HRT protocol</span></div>
+        </div>
+        <div class="p-row">
+          <div class="avatar">JV</div>
+          <div><b>Joanie Vilcheck, RN</b><span>Registered Nurse — injections, IV therapy, patient monitoring</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <span class="eyebrow" style="color:#f3c98a">From 202 Google reviews</span>
+      <h2>4.8 stars across <em>two decades</em> of patients.</h2>
+      <div class="meta"><span class="stars">★★★★★</span> &nbsp; 4.8 average · <a href="#" style="color:#f3c98a;border-bottom:1px solid #f3c98a">See all on Google</a></div>
+    </div>
+    <div class="review-grid">
+      <div class="review">
+        <span class="tag">Semaglutide</span>
+        <p>"Down 18 lbs in three months. The thing I appreciated most is that I actually saw the doctor — they adjusted my dose twice when side effects came up. Not just a refill mill."</p>
+        <div class="name"><b>Jessica R.</b> · Mesa patient · 2 years</div>
+      </div>
+      <div class="review">
+        <span class="tag">Hormone Replacement</span>
+        <p>"I'd been told 'your labs are fine' by three other doctors. Vitality actually listened, ran a full panel, and built me a plan. I sleep through the night again."</p>
+        <div class="name"><b>Mark T.</b> · Gilbert · HRT patient</div>
+      </div>
+      <div class="review">
+        <span class="tag">Botox + IV</span>
+        <p>"Been coming for six years. Desiree and Joanie are the only people I trust with my face. The new IV menu after a hard week is also unbeatable."</p>
+        <div class="name"><b>Karen M.</b> · Tempe · returning patient</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow">Book a consult</span>
+      <h2>Free 20-minute consult. <em>No pressure.</em></h2>
+      <p class="contact-info">Tell us what you're hoping to address — weight, hormones, aesthetics — and we'll walk you through the realistic options, pricing, and timeline. If we're not the right fit, we'll say so.</p>
+      <div class="info-block">
+        <div class="label">Mesa flagship</div>
+        <div class="val">2058 S Dobson Rd · Mesa, AZ 85202</div>
+        <div class="val" style="margin-top:6px"><a href="tel:+14808548000">(480) 854-8000</a></div>
+      </div>
+      <div class="info-block">
+        <div class="label">Email</div>
+        <div class="val"><a href="mailto:mesavitality@gmail.com">mesavitality@gmail.com</a></div>
+      </div>
+      <div class="info-block">
+        <div class="label">Hours</div>
+        <div class="val">Mon–Fri 9–6 · Sat 10–3 · Sun closed</div>
+      </div>
+    </div>
+
+    <form class="booking" id="bookingForm" novalidate>
+      <h3>Request your visit</h3>
+      <p class="sub">Pick a service and a window — we'll text you to confirm within one business hour.</p>
+      <div class="row-2">
+        <div class="field">
+          <label>First name</label>
+          <input type="text" name="first" required placeholder="Jane">
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="tel" name="phone" required placeholder="(480) 555-0100">
+        </div>
+      </div>
+      <div class="field">
+        <label>What are you interested in?</label>
+        <select name="service" required>
+          <option value="">Choose a service…</option>
+          <option>Semaglutide / GLP-1 weight loss</option>
+          <option>HCG weight loss</option>
+          <option>Hormone replacement therapy</option>
+          <option>IV hydration / vitamin therapy</option>
+          <option>Botox / Dysport / Xeomin</option>
+          <option>Dermal filler</option>
+          <option>Microneedling / PRP</option>
+          <option>Not sure — I'd like to talk it through</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Best time to reach you</label>
+        <select name="time" required>
+          <option value="">Pick a window…</option>
+          <option>Today — anytime</option>
+          <option>This week — mornings</option>
+          <option>This week — afternoons</option>
+          <option>Next week</option>
+          <option>Just have a question — no rush</option>
+        </select>
+      </div>
+      <button type="submit" class="submit">Request my consult →</button>
+      <p class="form-foot">We never share your info. By submitting you agree to receive a text from our team.</p>
+    </form>
+
+    <div class="success" id="success" style="grid-column:2;margin-top:24px">
+      <b>Thank you — you're booked in.</b>
+      A member of our Mesa team will text you within one business hour to confirm your time. If it's urgent, call <a href="tel:+14808548000" style="color:var(--clay);font-weight:600">(480) 854-8000</a>.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-row">
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-size:22px;color:var(--bone);margin-bottom:6px">Vitality Med Spa</div>
+      <div>Mesa · Phoenix · Scottsdale &nbsp;·&nbsp; Established 2006</div>
+    </div>
+    <div class="foot-secure">🔒 Secured by valid SSL · HIPAA-aware intake</div>
+    <div class="foot-meta">
+      © 2026 Vitality Med Spa · <a href="#">Privacy</a> · <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('bookingForm');
+  const success = document.getElementById('success');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.first.value || !form.phone.value || !form.service.value || !form.time.value) {
+      [...form.querySelectorAll('[required]')].forEach(el => {
+        if (!el.value) el.style.borderColor = 'var(--clay)';
+      });
+      return;
+    }
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+</script>
+
+</body>
+</html>
