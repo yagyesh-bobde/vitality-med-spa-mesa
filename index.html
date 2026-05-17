@@ -93,7 +93,7 @@
   .svc{position:relative;border-radius:18px;overflow:hidden;background:var(--sand);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff;transition:transform .25s}
   .svc:hover{transform:translateY(-4px)}
   .svc .bg{position:absolute;inset:0;background-size:cover;background-position:center}
-  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,22,20,.0) 38%,rgba(26,22,20,.78) 100%)}
+  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,22,20,.05) 30%,rgba(26,22,20,.88) 100%)}
   .svc .body{position:relative;z-index:2}
   .svc h3{font-size:22px;color:#fff;margin-bottom:6px}
   .svc .price{font-size:13px;color:rgba(255,255,255,.85);font-family:'DM Sans';font-weight:500}
@@ -129,6 +129,9 @@
   .team-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
   .team-photo{aspect-ratio:4/5;border-radius:22px;background:var(--sand-2);overflow:hidden;position:relative}
   .team-photo .placeholder{position:absolute;inset:0;background:linear-gradient(160deg,#d4c2a2,#b09879);display:grid;place-items:center;font-family:'Instrument Serif',serif;font-size:120px;color:rgba(248,243,232,.6)}
+  .team-caption{position:absolute;left:18px;bottom:18px;background:rgba(248,243,232,.94);backdrop-filter:blur(6px);padding:12px 16px;border-radius:10px;box-shadow:0 10px 30px rgba(45,32,12,.18)}
+  .team-caption b{display:block;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink)}
+  .team-caption span{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
   .team h2{font-size:54px}
   .team h2 em{color:var(--clay);font-style:italic}
   .team-lead{color:var(--muted);font-size:16px;margin:24px 0;line-height:1.7}
@@ -235,7 +238,7 @@
       </div>
     </div>
     <div class="hero-img">
-      <img src="assets/hero.png" alt="Vitality Med Spa in Mesa, Arizona — doctor-supervised wellness">
+      <img src="assets/hero-wellness.jpg" alt="Doctor-supervised wellness treatment at Vitality Med Spa, Mesa, Arizona">
       <div class="trust-card">
         <div class="lock">🔒</div>
         <div>
@@ -292,27 +295,27 @@
       <p>Aesthetic and wellness treatments for women and men in Mesa, Phoenix, and Scottsdale. Pricing as of mockup date — confirm at consult.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc wide" style="background:linear-gradient(135deg,#3a5a4a,#2f3d31)">
+      <div class="svc wide" style="background:#2f3d31 url('assets/svc-weightloss.jpg') center/cover">
         <span class="badge">Most booked</span>
         <div class="body">
           <h3>Semaglutide weight loss</h3>
           <div class="price">From $299 / mo · 3-mo program from $799</div>
         </div>
       </div>
-      <div class="svc med" style="background:linear-gradient(135deg,#b4593a,#8e4126)">
+      <div class="svc med" style="background:#8e4126 url('assets/svc-hrt.jpg') center/cover">
         <span class="badge">MD only</span>
         <div class="body">
           <h3>Hormone replacement</h3>
           <div class="price">Lab panel + plan from $349 · ongoing from $99/mo</div>
         </div>
       </div>
-      <div class="svc sm" style="background:linear-gradient(160deg,#d4a574,#b08855)">
+      <div class="svc sm" style="background:#b08855 url('assets/svc-botox.jpg') center/cover">
         <div class="body">
           <h3>Botox / Dysport</h3>
           <div class="price">From $12 / unit</div>
         </div>
       </div>
-      <div class="svc sm" style="background:linear-gradient(160deg,#7a8b6a,#5a6b4e)">
+      <div class="svc sm" style="background:#5a6b4e url('assets/svc-iv.jpg') center/cover">
         <div class="body">
           <h3>IV hydration</h3>
           <div class="price">From $129 per drip</div>
@@ -381,12 +384,17 @@
 <section class="team" id="team">
   <div class="container team-grid">
     <div class="team-photo">
-      <div class="placeholder">D</div>
+      <img src="assets/doctor-portrait.jpg" alt="Dr. Kristie Blessitt, MD — Medical Director" style="width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.02)">
+      <div class="team-caption">
+        <b>Dr. Kristie Blessitt, MD</b>
+        <span>Medical Director</span>
+      </div>
     </div>
     <div>
       <span class="eyebrow">The team behind your protocol</span>
       <h2>An MD medical director, a registered nurse, and an owner who <em>still does your intake herself.</em></h2>
       <p class="team-lead">Vitality opened in 2006 under Desiree Wooding, a licensed esthetician and certified laser technician. Today every clinical decision flows through our medical director, Dr. Kristie Blessitt, MD. You will meet her — not a chatbot, not a "wellness coach."</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:-8px;font-style:italic">* Doctor portrait shown is a placeholder; the actual portrait of Dr. Blessitt will be swapped in on relaunch.</p>
       <div class="team-people">
         <div class="p-row">
           <div class="avatar">DW</div>
